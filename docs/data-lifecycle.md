@@ -5,11 +5,11 @@
 | Typed draft | While typing | Browser memory | Until navigation or reload | Edit or clear |
 | Approved message | After approval | Browser memory | Until replaced | Copy/share/save |
 | Notebook entry | Explicit save | Browser localStorage | Until deleted or browser storage is cleared | Export, delete one, clear all |
-| Audio clip | During recording | Browser memory / Blob | Until transcription attempt ends | Stop, discard, do not save |
+| Audio clip | During recording | Browser memory / Blob | Until tab closes, download, or discard | Stop, play, download, discard |
 | Session token | API session | Browser memory | Short-lived | Expires automatically |
 | Provider transcript request | Explicit transcription | Provider request boundary | Provider policy applies | Disabled unless enabled and acknowledged |
 
-The server does not log request bodies, store audio, or persist message content. Logs may contain route, status, timing, and a pseudonymous request id. Operators must treat request ids and timestamps as potentially sensitive metadata.
+The local recorder does not contact the server. The server does not log request bodies, store audio, or persist message content. Logs may contain route, status, timing, and a pseudonymous request id. Operators must treat request ids and timestamps as potentially sensitive metadata.
 
 ## Deletion guarantees
 

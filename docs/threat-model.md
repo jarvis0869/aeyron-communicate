@@ -12,7 +12,7 @@
 
 | Threat | Control | Residual risk |
 | --- | --- | --- |
-| Accidental upload | Typed path works offline; recording is opt-in; speech disabled by default | A user can still choose transcription |
+| Accidental upload | Typed path works offline; recording stays local; no upload action exists in the local recorder | A future transcription feature must be a separate explicit action |
 | Model changes meaning | Original is shown; approval is mandatory; revision invalidates stale suggestions | User may approve a bad edit |
 | Prompt injection in text | Text is rendered as text; no tool execution; rewrite is deterministic by default | External systems receiving copied text are out of scope |
 | Replay or duplicate request | Short-lived session, idempotency key, rate limits | In-memory state resets on restart |

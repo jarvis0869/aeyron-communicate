@@ -4,7 +4,7 @@ A privacy-first communication companion for people whose voice, speech, or typin
 
 ## What works now
 
-- Speak: record a short clip, then transcribe only when an explicitly configured provider is enabled.
+- Speak: record a short clip locally, play it back, download it, or discard it. Audio is not uploaded.
 - Type: compose text with a large, forgiving editor.
 - Review: show the original and editable draft. No rewrite is sent without approval.
 - Output: copy, share, read aloud, or save privately on the device.
@@ -29,7 +29,7 @@ pip install -r requirements.txt
 uvicorn app.main:app --host 127.0.0.1 --port 8000 --workers 1 --no-access-log
 ```
 
-The backend defaults to speech disabled. To enable OpenAI transcription, set the variables in `backend/.env.example`, provide a valid key, and separately acknowledge the provider privacy policy. The app never pretends that transcription succeeded when it is unavailable.
+The browser recorder is local-only and works without a backend or API key. The backend's optional batch transcription endpoint remains disabled by default. If a future UI explicitly enables transcription, set the variables in `backend/.env.example`, provide a valid key, and separately acknowledge the provider privacy policy. The app never pretends that transcription succeeded when it is unavailable.
 
 ## Checks
 
